@@ -4,9 +4,9 @@ extends PopochiuCharacter
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
 
-const Data := preload('character_dude_state.gd')
+const Data := preload('character_bum_state.gd')
 
-var state: Data = load("res://game/characters/dude/character_dude.tres")
+var state: Data = load("res://game/characters/bum/character_bum.tres")
 
 
 #region Virtual ####################################################################################
@@ -18,12 +18,12 @@ func _on_room_set() -> void:
 # When the node is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	#E.command_fallback()
+	E.command_fallback()
 	# For example, you can make the player character walk to this character, gaze at it, and then
 	# say something:
 #	await C.player.walk_to_clicked()
 #	await C.player.face_clicked()
-	await C.player.say("It's me! Dude.")
+#	await C.player.say("Hi!")
 
 
 func _on_double_click() -> void:
@@ -35,10 +35,10 @@ func _on_double_click() -> void:
 # When the node is right clicked
 func _on_right_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	
+	E.command_fallback()
 	# For example, you can make the player character gaze at this character and then say something:
 #	await C.player.face_clicked()
-	await C.player.say("I don't want to touch myself, man")
+#	await C.player.say("Is someone...")
 
 
 # When the node is middle clicked

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://daljn0im6rbdo"]
+[gd_scene load_steps=9 format=3 uid="uid://daljn0im6rbdo"]
 
 [ext_resource type="Script" uid="uid://gjneanyvogcd" path="res://game/rooms/street/room_street.gd" id="1_lwmh1"]
 [ext_resource type="PackedScene" uid="uid://b2oq5ey6avr3f" path="res://game/rooms/street/props/background/prop_background.tscn" id="2_r8dtu"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dt5288dqqwfl" path="res://game/rooms/street/props/tree/prop_tree.tscn" id="5_molqv"]
 [ext_resource type="PackedScene" uid="uid://dukq8t4v7gf8u" path="res://game/characters/dude/character_dude.tscn" id="5_nrj6t"]
 [ext_resource type="Texture2D" uid="uid://26v7wti42m00" path="res://game/rooms/street/props/tree/tree.png" id="6_7bbwe"]
+[ext_resource type="PackedScene" uid="uid://ddcrh0ric3nnq" path="res://game/characters/bum/character_bum.tscn" id="8_bh5t1"]
 
 [node name="RoomStreet" type="Node2D"]
 script = ExtResource("1_lwmh1")
@@ -34,6 +35,7 @@ texture = ExtResource("6_7bbwe")
 baseline = 108
 interaction_polygon = PackedVector2Array(-156.24408, -131.7319, -23.800385, -133.9959, 106.3793, -131.7319, 133.54727, -81.92402, 97.067566, -44.97303, 50.197205, -21.899292, 1.6528931, -22.620342, 36.805664, 47.321938, 91.66336, 102.59157, -17.008392, 105.987564, -1.6949768, 42.995598, -17.597412, 9.106049, -28.478027, -21.17823, -106.3163, -47.857246, -143.79211, -81.92402)
 interaction_polygon_position = Vector2(14.744406, 24.192142)
+metadata/_edit_lock_ = true
 
 [node name="Hotspots" type="Node2D" parent="."]
 
@@ -43,5 +45,8 @@ interaction_polygon_position = Vector2(14.744406, 24.192142)
 
 [node name="Characters" type="Node2D" parent="."]
 
+[node name="CharacterBum *" parent="Characters" instance=ExtResource("8_bh5t1")]
+position = Vector2(315, 275)
+
 [node name="CharacterDude *" parent="Characters" instance=ExtResource("5_nrj6t")]
-position = Vector2(22, 248)
+position = Vector2(50, 261)

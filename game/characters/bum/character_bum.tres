@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cw32enyd1rb6m"]
+
+[ext_resource type="Script" path="res://game/characters/bum/character_bum_state.gd" id="1_rluq4"]
+
+[resource]
+resource_name = "Bum"
+script = ExtResource("1_rluq4")
+script_name = "Bum"
+scene = "res://game/characters/bum/character_bum.tscn"
