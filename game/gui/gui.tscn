@@ -1,0 +1,406 @@
+[gd_scene load_steps=49 format=3 uid="uid://cu8qmqlc6g4j"]
+
+[ext_resource type="Theme" uid="uid://bn0lpam35a4so" path="res://game/gui/resources/gui_theme.tres" id="1_tl1ue"]
+[ext_resource type="Script" path="res://game/gui/gui.gd" id="2_bjqyy"]
+[ext_resource type="Texture2D" uid="uid://5du7pqekanj4" path="res://game/gui/images/simple_click_cursor.png" id="3_jeqvj"]
+[ext_resource type="PackedScene" uid="uid://cbopi5t1by8t2" path="res://game/gui/components/hover_text/hover_text.tscn" id="4_4jprg"]
+[ext_resource type="PackedScene" uid="uid://toxv2a7gg66l" path="res://game/gui/components/dialog_text/dialog_caption/dialog_caption.tscn" id="5_b83v5"]
+[ext_resource type="Script" uid="uid://d4gpxkmeefen0" path="res://game/gui/components/hover_text/hover_text_custom.gd" id="5_be73h"]
+[ext_resource type="PackedScene" uid="uid://bfsjamk2j8wfc" path="res://game/gui/components/dialog_menu/dialog_menu.tscn" id="6_75iei"]
+[ext_resource type="Script" uid="uid://cve5ban0ccqsd" path="res://game/gui/components/dialog_text/dialog_caption/dialog_caption_custom.gd" id="7_0m1b2"]
+[ext_resource type="PackedScene" uid="uid://bc5vjydwg3gmf" path="res://game/gui/components/inventory_bar/inventory_bar.tscn" id="7_tneg5"]
+[ext_resource type="PackedScene" uid="uid://b2b4ou1vda1uy" path="res://game/gui/components/settings_bar/settings_bar.tscn" id="8_wh5po"]
+[ext_resource type="Script" uid="uid://oj51y0w8cn4p" path="res://game/gui/components/dialog_menu/dialog_menu_custom.gd" id="9_brng2"]
+[ext_resource type="PackedScene" uid="uid://dnoxitbghq5t1" path="res://game/gui/components/system_text/system_text.tscn" id="9_vmv0f"]
+[ext_resource type="PackedScene" uid="uid://kejickrjs8om" path="res://game/gui/components/popups/save_and_load_popup/save_and_load_popup.tscn" id="10_olwrx"]
+[ext_resource type="PackedScene" uid="uid://du073dmctab4" path="res://game/gui/components/dialog_menu/dialog_menu_option/dialog_menu_option.tscn" id="10_urbgs"]
+[ext_resource type="PackedScene" uid="uid://dm32gim8tw5bl" path="res://game/gui/components/popups/text_settings_popup/text_settings_popup.tscn" id="11_57o1i"]
+[ext_resource type="Script" uid="uid://by8p4p1gpf3vt" path="res://game/gui/components/inventory_bar/inventory_bar_custom.gd" id="12_f7vb5"]
+[ext_resource type="PackedScene" uid="uid://dct3vty7ee4ni" path="res://game/gui/components/popups/sound_settings_popup/sound_settings_popup.tscn" id="12_unoue"]
+[ext_resource type="PackedScene" uid="uid://c06bx0gx3mg0s" path="res://game/gui/components/popups/history_popup/history_popup.tscn" id="13_l2iqn"]
+[ext_resource type="PackedScene" uid="uid://6uxs6lj40msd" path="res://game/gui/components/popups/quit_popup/quit_popup.tscn" id="14_s50ci"]
+[ext_resource type="Script" uid="uid://dqcm570gm0uf3" path="res://game/gui/components/settings_bar/settings_bar_custom.gd" id="14_sjk6c"]
+[ext_resource type="Script" uid="uid://bxonccs4cljk1" path="res://game/gui/components/system_text/system_text_custom.gd" id="16_6oxxv"]
+[ext_resource type="Script" uid="uid://dnl01q287w77h" path="res://game/gui/components/popups/save_and_load_popup/save_and_load_popup_custom.gd" id="18_oatf2"]
+[ext_resource type="Script" uid="uid://bme75kygdw2oa" path="res://game/gui/components/popups/text_settings_popup/text_settings_popup_custom.gd" id="20_4po70"]
+[ext_resource type="Script" uid="uid://bxb2b1a6ryog3" path="res://game/gui/components/popups/sound_settings_popup/sound_settings_popup_custom.gd" id="22_lwin8"]
+[ext_resource type="Script" uid="uid://bo4mclliu7oip" path="res://game/gui/components/popups/history_popup/history_popup_custom.gd" id="24_c5ddb"]
+[ext_resource type="PackedScene" uid="uid://dhsohlffe35go" path="res://game/gui/components/popups/history_popup/components/dialog_line.tscn" id="25_ncyta"]
+[ext_resource type="PackedScene" uid="uid://cofuaixcgq0xq" path="res://game/gui/components/popups/history_popup/components/interaction_line.tscn" id="26_aqoko"]
+[ext_resource type="Script" uid="uid://6lyfa7nfc3or" path="res://game/gui/components/popups/quit_popup/quit_popup_custom.gd" id="28_hdjky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjqyy"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be73h"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0m1b2"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brng2"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urbgs"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vb5"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(576, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjk6c"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oxxv"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oatf2"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4po70"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwin8"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5ddb"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncyta"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqoko"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdjky"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4mfv"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am45f"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpyit"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox0q1"]
+atlas = ExtResource("3_jeqvj")
+region = Rect2(544, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvs6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjqyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be73h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m1b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m1b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be73h")
+}],
+"loop": true,
+"name": &"active",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brng2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urbgs")
+}],
+"loop": true,
+"name": &"down",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7vb5")
+}],
+"loop": true,
+"name": &"gui",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjk6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oxxv")
+}],
+"loop": true,
+"name": &"left",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oatf2")
+}],
+"loop": false,
+"name": &"look",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4po70")
+}],
+"loop": false,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwin8")
+}],
+"loop": false,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5ddb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncyta")
+}],
+"loop": true,
+"name": &"right",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqoko")
+}],
+"loop": false,
+"name": &"search",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdjky")
+}],
+"loop": false,
+"name": &"talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4mfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am45f")
+}],
+"loop": true,
+"name": &"up",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpyit")
+}],
+"loop": false,
+"name": &"use",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox0q1")
+}],
+"loop": false,
+"name": &"wait",
+"speed": 5.0
+}]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("2_bjqyy")
+
+[node name="Cursor" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tvs6t")
+animation = &"wait"
+
+[node name="HoverText" type="Control" parent="." groups=["popochiu_gui_component"] instance=ExtResource("4_4jprg")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("5_be73h")
+hide_during_dialogs = true
+
+[node name="DialogCaption" type="Control" parent="." groups=["popochiu_gui_component"] instance=ExtResource("5_b83v5")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("7_0m1b2")
+
+[node name="DialogMenu" type="Control" parent="." groups=["popochiu_gui_component"] instance=ExtResource("6_75iei")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("9_brng2")
+option_scene = ExtResource("10_urbgs")
+
+[node name="InventoryBar" type="Control" parent="." groups=["popochiu_gui_component"] instance=ExtResource("7_tneg5")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("12_f7vb5")
+
+[node name="SettingsBar" type="Control" parent="." groups=["popochiu_gui_component"] instance=ExtResource("8_wh5po")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("14_sjk6c")
+
+[node name="SystemText" type="Control" parent="." groups=["popochiu_gui_component"] instance=ExtResource("9_vmv0f")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("16_6oxxv")
+
+[node name="Popups" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SaveAndLoadPopup" type="Control" parent="Popups" groups=["popochiu_gui_popup"] instance=ExtResource("10_olwrx")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("18_oatf2")
+script_name = &"SaveAndLoadPopup"
+
+[node name="TextSettingsPopup" type="Control" parent="Popups" groups=["popochiu_gui_popup"] instance=ExtResource("11_57o1i")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("20_4po70")
+script_name = &"SierraTextPopup"
+title = "Text options"
+
+[node name="SoundSettingsPopup" type="Control" parent="Popups" groups=["popochiu_gui_popup"] instance=ExtResource("12_unoue")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("22_lwin8")
+script_name = &"SoundSettingsPopup"
+title = "Sound Settings"
+
+[node name="HistoryPopup" type="Control" parent="Popups" groups=["popochiu_gui_popup"] instance=ExtResource("13_l2iqn")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("24_c5ddb")
+dialog_line = ExtResource("25_ncyta")
+interaction_line = ExtResource("26_aqoko")
+script_name = &"HistoryPopup"
+title = "History"
+
+[node name="QuitPopup" type="Control" parent="Popups" groups=["popochiu_gui_popup"] instance=ExtResource("14_s50ci")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tl1ue")
+script = ExtResource("28_hdjky")
+script_name = &"QuitPopup"
+title = "Quit game"

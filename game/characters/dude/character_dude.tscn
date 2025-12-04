@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=3 uid="uid://dukq8t4v7gf8u"]
+
+[ext_resource type="Script" uid="uid://1gt0o7mkagus" path="res://game/characters/dude/character_dude.gd" id="1_edfrc"]
+[ext_resource type="Texture2D" uid="uid://bf7cn6wma1d4k" path="res://game/characters/dude/dude-improved.png" id="2_vf665"]
+
+[sub_resource type="Animation" id="Animation_vf665"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ndx0c"]
+resource_name = "idle"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_j3w47"]
+resource_name = "walk_d"
+length = 0.3
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_c7uiy"]
+resource_name = "walk_r"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_w0pnl"]
+resource_name = "walk_u"
+length = 0.3
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2buib"]
+_data = {
+&"RESET": SubResource("Animation_vf665"),
+&"idle": SubResource("Animation_ndx0c"),
+&"walk_d": SubResource("Animation_j3w47"),
+&"walk_r": SubResource("Animation_c7uiy"),
+&"walk_u": SubResource("Animation_w0pnl")
+}
+
+[node name="CharacterDude" type="Area2D"]
+script = ExtResource("1_edfrc")
+flips_when = 2
+dialog_pos = Vector2(-0.063690186, -86.43859)
+popochiu_placeholder = null
+script_name = "Dude"
+description = "Dude"
+cursor = 8
+interaction_polygon = PackedVector2Array(-1, -53, 19, -52, 25, -6, 8, -4, -7, -3)
+interaction_polygon_position = Vector2(-1, -10)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+position = Vector2(-1, -10)
+polygon = PackedVector2Array(-1, -53, 19, -52, 25, -6, 8, -4, -7, -3)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2buib")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.7499986, -38.867188)
+scale = Vector2(1.7031249, 1.7031249)
+texture = ExtResource("2_vf665")
+hframes = 12
