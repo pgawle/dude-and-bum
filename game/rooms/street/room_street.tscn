@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://daljn0im6rbdo"]
+[gd_scene load_steps=12 format=3 uid="uid://daljn0im6rbdo"]
 
 [ext_resource type="Script" uid="uid://gjneanyvogcd" path="res://game/rooms/street/room_street.gd" id="1_lwmh1"]
 [ext_resource type="PackedScene" uid="uid://b2oq5ey6avr3f" path="res://game/rooms/street/props/background/prop_background.tscn" id="2_r8dtu"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ble8ld7gv2rea" path="res://game/rooms/street/props/apple/prop_apple.tscn" id="7_dmwd2"]
 [ext_resource type="PackedScene" uid="uid://ddcrh0ric3nnq" path="res://game/characters/bum/character_bum.tscn" id="8_bh5t1"]
 [ext_resource type="Texture2D" uid="uid://c5ilai7y0nd2y" path="res://game/rooms/street/props/apple/apple.png" id="8_jxt23"]
+[ext_resource type="PackedScene" uid="uid://ccm4b8n03jx0r" path="res://game/rooms/street/hotspots/right_exit/hotspot_right_exit.tscn" id="9_fmpc1"]
 
 [node name="RoomStreet" type="Node2D"]
 script = ExtResource("1_lwmh1")
@@ -51,6 +52,14 @@ cursor = 10
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
+
+[node name="RightExit" parent="Hotspots" instance=ExtResource("9_fmpc1")]
+position = Vector2(320, 160)
+description = "Go to Screen 2"
+walk_to_point = Vector2(300.2611, 122.14014)
+cursor = 6
+interaction_polygon = PackedVector2Array(-9, -253, 27, -248, 26, 54, -7, 54)
+interaction_polygon_position = Vector2(293, 96)
 
 [node name="Regions" type="Node2D" parent="."]
 

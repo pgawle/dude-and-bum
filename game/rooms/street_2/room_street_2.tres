@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bmpv0tup8e84u"]
+
+[ext_resource type="Script" path="res://game/rooms/street_2/room_street_2_state.gd" id="1_c0fnl"]
+
+[resource]
+resource_name = "Street2"
+script = ExtResource("1_c0fnl")
+script_name = "Street2"
+scene = "res://game/rooms/street_2/room_street_2.tscn"
