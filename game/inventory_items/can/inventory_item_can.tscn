@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://yoxa7iyxhokc"]
+
+[ext_resource type="Texture2D" uid="uid://8os7sakkd7k4" path="res://game/inventory_items/can/used_can.png" id="1_11mfl"]
+[ext_resource type="Script" uid="uid://ct5grwpttbywj" path="res://game/inventory_items/can/inventory_item_can.gd" id="1_orejd"]
+
+[node name="ItemCan" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_11mfl")
+stretch_mode = 5
+script = ExtResource("1_orejd")
+script_name = "Can"
+description = "Slimey Can"

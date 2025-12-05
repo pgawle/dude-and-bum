@@ -47,7 +47,7 @@ position = Vector2(407, 96)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_jxt23")
 walk_to_point = Vector2(2.968689, 131.04616)
-look_at_point = Vector2(0, -1.2722778)
+look_at_point = Vector2(0.84820557, 1.2723083)
 cursor = 10
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
