@@ -1,7 +1,7 @@
 @tool
 extends PopochiuDialog
 
-var inital_dialog = false
+var inital_dialog = true
 
 #region Virtual ####################################################################################
 func _on_start() -> void:
@@ -62,7 +62,7 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
 			await C.player.say("Maybe I could trade you something for it.")
 			await C.Bum.say("Unless it's a better version of this stick, the answer is still no.")
 		"Bye":
-			await C.Bum.say("Alright, never mind.")
+			await C.player.say("Alright, never mind.")
 			stop()
 	_show_options()
 

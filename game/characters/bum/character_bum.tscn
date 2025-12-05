@@ -44,6 +44,7 @@ _data = {
 
 [node name="CharacterBum" type="Area2D"]
 script = ExtResource("1_kw6f4")
+text_color = Color(1, 0, 1, 1)
 dialog_pos = Vector2(-13.382492, -95.2706)
 popochiu_placeholder = null
 script_name = "Bum"
