@@ -8,7 +8,6 @@ const Data := preload('character_bum_state.gd')
 
 var state: Data = load("res://game/characters/bum/character_bum.tres")
 
-
 #region Virtual ####################################################################################
 # When the room in which this node is located finishes being added to the tree
 func _on_room_set() -> void:
@@ -24,7 +23,6 @@ func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
 	D.BumDialog.start()
-#	await C.player.say("Hi!")
 
 
 func _on_double_click() -> void:
@@ -84,6 +82,8 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		await C.Bum.say("Alright.")
 		await C.Bum.say("You didn't have to, but you gave me something that actually means something to me.")
 		await C.Bum.say("I can give something back.")
+		$Stick.hide()
+		await I.Stick.add()
 		
 		await C.player.say("Are you sure?")
 		await C.Bum.say("Yeah. Just don't tell anyone I was nice today.")

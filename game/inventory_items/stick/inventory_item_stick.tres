@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://uyh44pwc2m3m"]
+
+[ext_resource type="Script" path="res://game/inventory_items/stick/inventory_item_stick_state.gd" id="1_22n85"]
+
+[resource]
+resource_name = "Stick"
+script = ExtResource("1_22n85")
+script_name = "Stick"
+scene = "res://game/inventory_items/stick/inventory_item_stick.tscn"

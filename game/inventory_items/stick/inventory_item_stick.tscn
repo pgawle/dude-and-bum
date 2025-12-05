@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3o2eb3s4w5lo"]
+
+[ext_resource type="Texture2D" uid="uid://cljnwrxy73pnm" path="res://game/inventory_items/stick/stick2.png" id="1_b6rpo"]
+[ext_resource type="Script" uid="uid://t8p4ptm7t4mv" path="res://game/inventory_items/stick/inventory_item_stick.gd" id="1_jsmer"]
+
+[node name="ItemStick" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_b6rpo")
+stretch_mode = 5
+script = ExtResource("1_jsmer")
+script_name = "Stick"
+description = "Stick"

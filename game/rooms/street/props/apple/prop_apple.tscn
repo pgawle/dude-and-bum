@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://ble8ld7gv2rea"]
 
-[ext_resource type="Script" path="res://game/rooms/street/props/apple/prop_apple.gd" id="1_jhw5r"]
+[ext_resource type="Script" uid="uid://v1nk7huc2b5q" path="res://game/rooms/street/props/apple/prop_apple.gd" id="1_jhw5r"]
 
 [node name="Apple" type="Area2D"]
 script = ExtResource("1_jhw5r")
 script_name = "Apple"
 description = "Apple"
 cursor = 1
-interaction_polygon = PackedVector2Array()
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
 visible = false

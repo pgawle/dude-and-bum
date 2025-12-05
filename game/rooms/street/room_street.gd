@@ -10,7 +10,6 @@ var state: Data = load("res://game/rooms/street/room_street.tres")
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
-	#await I.Can.add()
 	pass
 
 

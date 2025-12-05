@@ -48,7 +48,13 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# prop. Note that you have to change the name of the `_item` parameter to `item`.
 	if _item == I.Can:
 		await C.player.say("Can is too light.")
-
+	
+	if _item == I.Stick:
+		I.Stick.remove()
+		self.hide()
+		I.Apple.add()
+		await C.player.say("Finally!") 
+		
 
 # When an inventory item linked to this Prop (link_to_item) is removed from
 # the inventory (i.e. when it is used in something that makes use of the object).

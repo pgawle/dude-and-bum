@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc36skmecslbm"]
+
+[ext_resource type="Script" uid="uid://csfhgb4iexg6m" path="res://game/inventory_items/apple/inventory_item_apple.gd" id="1_nihpl"]
+[ext_resource type="Texture2D" uid="uid://cuhdl8smgd704" path="res://game/inventory_items/apple/apple.png" id="1_vciw6"]
+
+[node name="ItemApple" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_vciw6")
+stretch_mode = 5
+script = ExtResource("1_nihpl")
+script_name = "Apple"
+description = "Apple"
