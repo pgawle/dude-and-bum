@@ -21,6 +21,7 @@ func _on_click() -> void:
 			tries_trashcans += 1
 		1:
 			await C.player.say("Ok. If you insist.")
+			await C.Dude.play_animation('pickup')
 			await I.Can.add()
 			tries_trashcans += 1
 		_:	

@@ -51,7 +51,44 @@ func _on_middle_click() -> void:
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	E.command_fallback()
+	await C.player.walk_to_clicked()
+	if _item == I.Can:
+		await C.player.say("I've got something for you.")
+		
+		await C.Bum.say("If it's another question about the stick, I swear...")
+		
+		await C.player.say("Relax. It's a can. Thought it might interest you.")
+		I.Can.remove()
+		await C.Bum.say("Let me look at it.")
+		await C.Bum.say("Huh. It's used. Dented. Scratched up.")
+		await C.Bum.say("Most people would walk right past it.")
+		
+		await C.player.say("So... it's worthless?")
+		
+		await C.Bum.say("Worthless? No.")
+		await C.Bum.say("See that faint ring around the top? Production style they stopped using years ago.")
+		await C.Bum.say("The slight bend on the left, that's old machinery, not cheap modern stamping.")
+		
+		await C.player.say("You really see all that?")
+		
+		
+		await C.Bum.say("Some folks read books. I read metal.")
+		await C.Bum.say("This one's is real vintage quality.")
+		
+		await C.player.say("Glad it's in good hands then.")
+		
+		await C.Bum.say("It'll go well with the rest of the collection.")
+		
+		await C.player.say("So.. about the stick...")
+		
+		await C.Bum.say("Alright.")
+		await C.Bum.say("You didn't have to, but you gave me something that actually means something to me.")
+		await C.Bum.say("I can give something back.")
+		
+		await C.player.say("Are you sure?")
+		await C.Bum.say("Yeah. Just don't tell anyone I was nice today.")
+		await C.Bum.say("...and don't snap it in half. It's still a good stick.")
+	#E.command_fallback()
 	# For example, you can make the player character say something when the Key item is used in this
 	# character. Note that you have to change the name of the `_item` parameter to `item`.
 #	if item == I.Key:
