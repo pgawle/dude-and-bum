@@ -4,7 +4,7 @@ extends PopochiuProp
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
 
-var tries_trashcans = false
+var tries_trashcans = 0
 
 #region Virtual ####################################################################################
 # When the node is clicked
@@ -15,15 +15,17 @@ func _on_click() -> void:
 	# something:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	if(!tries_trashcans):
-		await C.player.say("Do I really look like that much of a bum?")
-		tries_trashcans = true
-	else:
-		await C.player.say("Ok. If you insist.")	
-		await I.Can.add()
-		
-
-
+	match tries_trashcans:
+		0: 
+			await C.player.say("Do I really look like that much of a bum?")
+			tries_trashcans += 1
+		1:
+			await C.player.say("Ok. If you insist.")
+			await I.Can.add()
+			tries_trashcans += 1
+		_:	
+			await C.player.say("It's empty and still gross.")	
+			
 func _on_double_click() -> void:
 	# Replace the call to E.command_fallback() with your code.
 	pass
