@@ -10,12 +10,14 @@ var state: Data = load("res://game/rooms/street/room_street.tres")
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
+	await C.player.face_left()
 	pass
 
 
 # What happens when the room changing transition finishes. At this point the room
 # is visible.
 func _on_room_transition_finished() -> void:
+	
 	# You can use await E.queue([]) to execute a sequence of instructions
 	pass
 

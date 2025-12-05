@@ -10,6 +10,7 @@ var state: Data = load("res://game/rooms/street_2/room_street_2.tres")
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
+	await C.player.face_left()
 	pass
 
 
