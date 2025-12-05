@@ -21,7 +21,7 @@ func _on_click() -> void:
 	#E.command_fallback()
 	# For example, you can make the player character walk to this character, gaze at it, and then
 	# say something:
-#	await C.player.walk_to_clicked()
+	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
 	D.BumDialog.start()
 #	await C.player.say("Hi!")

@@ -1,7 +1,7 @@
 @tool
 extends PopochiuDialog
 
-var inital_dialog = true
+var inital_dialog = false
 
 #region Virtual ####################################################################################
 func _on_start() -> void:

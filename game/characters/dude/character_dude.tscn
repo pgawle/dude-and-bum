@@ -100,7 +100,7 @@ _data = {
 [node name="CharacterDude" type="Area2D"]
 script = ExtResource("1_edfrc")
 flips_when = 2
-dialog_pos = Vector2(-0.063690186, -86.43859)
+dialog_pos = Vector2(-0.063690186, -83.80528)
 popochiu_placeholder = null
 script_name = "Dude"
 description = "Dude"
@@ -109,6 +109,7 @@ interaction_polygon = PackedVector2Array(-1, -53, 19, -52, 25, -6, 8, -4, -7, -3
 interaction_polygon_position = Vector2(-1, -10)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
 position = Vector2(-1, -10)
 polygon = PackedVector2Array(-1, -53, 19, -52, 25, -6, 8, -4, -7, -3)
 

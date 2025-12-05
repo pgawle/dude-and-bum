@@ -33,6 +33,7 @@ position = Vector2(445, 108.00001)
 scale = Vector2(0.8833941, 0.8833941)
 texture = ExtResource("6_7bbwe")
 baseline = 108
+walk_to_point = Vector2(-30.959106, 128.50159)
 interaction_polygon = PackedVector2Array(-156.24408, -131.7319, -23.800385, -133.9959, 106.3793, -131.7319, 133.54727, -81.92402, 97.067566, -44.97303, 50.197205, -21.899292, 1.6528931, -22.620342, 36.805664, 47.321938, 91.66336, 102.59157, -17.008392, 105.987564, -1.6949768, 42.995598, -17.597412, 9.106049, -28.478027, -21.17823, -106.3163, -47.857246, -143.79211, -81.92402)
 interaction_polygon_position = Vector2(14.744406, 24.192142)
 metadata/_edit_lock_ = true
@@ -47,6 +48,10 @@ metadata/_edit_lock_ = true
 
 [node name="CharacterBum *" parent="Characters" instance=ExtResource("8_bh5t1")]
 position = Vector2(315, 275)
+walk_to_point = Vector2(-47.49887, 3.3928223)
+look_at_point = Vector2(-15.691498, -45.378433)
 
 [node name="CharacterDude *" parent="Characters" instance=ExtResource("5_nrj6t")]
 position = Vector2(50, 261)
+walk_to_point = Vector2(22.901276, -1.2723083)
+look_at_point = Vector2(23.325348, -0.84820557)
