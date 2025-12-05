@@ -16,15 +16,28 @@
 [Animation in Asprite](https://www.youtube.com/watch?v=kzzPg1RBbl0)
 
 ## Creating characters: 
-- go to Node, and move Sprite2D up so it is NOT in Center. So character BASELINE setting work properly.
+
+Important:
+
+for Baseline to work correcly go to characer Node, and Move Sprite2D up so it is position that legs are above center line. 
+
+## Dialog above characters: 
+
+![Screenshot](./README/Dialog1.png)
+![Screenshot](./README/Dialog2.png)
+
 
 ## Character Animation
-### names of direction
+### Names of direction
 walk_l  
 walk_r  
 walk_u  
 walk_d  
-idle  
+idle 
+
+More directions:  
+![Screenshot](./README/Positions.png)
+
 
 ### Movement
 
