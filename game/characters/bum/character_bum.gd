@@ -82,7 +82,6 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		await C.Bum.say("Alright.")
 		await C.Bum.say("You didn't have to, but you gave me something that actually means something to me.")
 		await C.Bum.say("I can give something back.")
-		$Stick.hide()
 		await I.Stick.add()
 		
 		await C.player.say("Are you sure?")

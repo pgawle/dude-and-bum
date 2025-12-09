@@ -9,13 +9,12 @@ extends PopochiuProp
 # When the node is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	#PopochiuUtils.e.command_fallback()
+	PopochiuUtils.e.command_fallback()
 	# For example, you can make the player character walk to this prop, gaze at it, and then say
 	# something:
-	await C.player.walk_to_clicked()
-	await C.player.face_clicked()
-	await C.player.say("Oof! I can't reach it!")
-	
+#	await C.player.walk_to_clicked()
+#	await C.player.face_clicked()
+#	await C.player.say("Not picking that up!")
 
 
 func _on_double_click() -> void:
@@ -27,8 +26,7 @@ func _on_double_click() -> void:
 # When the node is right clicked
 func _on_right_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	await C.player.say("Looks delicious! I am so hungry!")
-	#PopochiuUtils.e.command_fallback()
+	PopochiuUtils.e.command_fallback()
 	# For example, you can make the player character gaze at this prop and then say something:
 #	await C.player.face_clicked()
 #	await C.player.say("A deck of cards")
@@ -43,18 +41,12 @@ func _on_middle_click() -> void:
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	#PopochiuUtils.e.command_fallback()
+	PopochiuUtils.e.command_fallback()
 	# For example, you can make the player character say something when the Key item is used in this
 	# prop. Note that you have to change the name of the `_item` parameter to `item`.
-	if _item == I.Can:
-		await C.player.say("Can is too light.")
-	
-	if _item == I.Stick:
-		I.Stick.remove()
-		#self.hide()
-		I.Apple.add()
-		await C.player.say("Finally!") 
-		
+#	if item == I.Key:
+#		await C.player.say("I can't do that")
+
 
 # When an inventory item linked to this Prop (link_to_item) is removed from
 # the inventory (i.e. when it is used in something that makes use of the object).

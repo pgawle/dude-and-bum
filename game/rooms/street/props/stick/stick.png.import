@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfay8b23wbs4w"
-path="res://.godot/imported/stick.png-94cca185273f132ff97848b627065449.ctex"
+uid="uid://c0y3hx2h20ksp"
+path="res://.godot/imported/stick.png-1843153523a2e2d6aded31fb117ffb61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/characters/bum/stick.png"
-dest_files=["res://.godot/imported/stick.png-94cca185273f132ff97848b627065449.ctex"]
+source_file="res://game/rooms/street/props/stick/stick.png"
+dest_files=["res://.godot/imported/stick.png-1843153523a2e2d6aded31fb117ffb61.ctex"]
 
 [params]
 

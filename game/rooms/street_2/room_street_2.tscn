@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://btdxtq1rm7vsh"]
 
-[ext_resource type="Script" uid="uid://dyo5sx4y8foes" path="res://game/rooms/street_2/room_street_2.gd" id="1_hm83m"]
+[ext_resource type="Script" path="res://game/rooms/street_2/room_street_2.gd" id="1_hm83m"]
 [ext_resource type="PackedScene" uid="uid://c2qijcjpg36bu" path="res://game/rooms/street_2/props/background/prop_background.tscn" id="2_5yc11"]
 [ext_resource type="PackedScene" uid="uid://jc2afdym1d7g" path="res://game/rooms/street_2/walkable_areas/floor/walkable_area_floor.tscn" id="2_44cop"]
 [ext_resource type="Texture2D" uid="uid://dbtgkatdv4lpc" path="res://game/rooms/street_2/props/background/street-2-background.png" id="3_tcyxs"]
@@ -31,7 +31,7 @@ metadata/_edit_lock_ = true
 [node name="Trashcans" parent="Props" instance=ExtResource("5_1xkho")]
 position = Vector2(425, 203)
 texture = ExtResource("6_a1kwe")
-walk_to_point = Vector2(-43.181824, 54.132782)
+walk_to_point = Vector2(-43.1818, 54.1328)
 cursor = 10
 interaction_polygon = PackedVector2Array(-31, -21, 33, -19, 26, 27, -29, 23)
 
@@ -40,7 +40,7 @@ interaction_polygon = PackedVector2Array(-31, -21, 33, -19, 26, 27, -29, 23)
 [node name="LeftExit" parent="Hotspots" instance=ExtResource("5_fovha")]
 position = Vector2(320, 160)
 description = "Go To Street 1"
-walk_to_point = Vector2(-306.96182, 114.29431)
+walk_to_point = Vector2(-306.962, 114.294)
 cursor = 4
 interaction_polygon = PackedVector2Array(-13, -233, 18, -234, 17, 85, -14, 84)
 interaction_polygon_position = Vector2(-306, 74)

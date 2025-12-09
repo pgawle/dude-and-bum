@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://daljn0im6rbdo"]
+[gd_scene load_steps=14 format=3 uid="uid://daljn0im6rbdo"]
 
 [ext_resource type="Script" uid="uid://gjneanyvogcd" path="res://game/rooms/street/room_street.gd" id="1_lwmh1"]
 [ext_resource type="PackedScene" uid="uid://b2oq5ey6avr3f" path="res://game/rooms/street/props/background/prop_background.tscn" id="2_r8dtu"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://ddcrh0ric3nnq" path="res://game/characters/bum/character_bum.tscn" id="8_bh5t1"]
 [ext_resource type="Texture2D" uid="uid://c5ilai7y0nd2y" path="res://game/rooms/street/props/apple/apple.png" id="8_jxt23"]
 [ext_resource type="PackedScene" uid="uid://ccm4b8n03jx0r" path="res://game/rooms/street/hotspots/right_exit/hotspot_right_exit.tscn" id="9_fmpc1"]
+[ext_resource type="PackedScene" uid="uid://bl0kybyvs0n5d" path="res://game/rooms/street/props/stick/prop_stick.tscn" id="9_x5muf"]
+[ext_resource type="Texture2D" uid="uid://c0y3hx2h20ksp" path="res://game/rooms/street/props/stick/stick.png" id="10_evyjx"]
 
 [node name="RoomStreet" type="Node2D"]
 script = ExtResource("1_lwmh1")
@@ -18,6 +20,7 @@ script_name = "Street"
 width = 640
 height = 320
 popochiu_placeholder = null
+metadata/_edit_lock_ = true
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
@@ -33,31 +36,38 @@ metadata/_edit_lock_ = true
 
 [node name="Tree" parent="Props" instance=ExtResource("5_molqv")]
 unique_name_in_owner = true
-position = Vector2(445, 108.00001)
-scale = Vector2(0.8833941, 0.8833941)
+position = Vector2(445, 108)
+scale = Vector2(0.883394, 0.883394)
 texture = ExtResource("6_7bbwe")
-baseline = -51
-walk_to_point = Vector2(-24.173492, 123.836494)
+baseline = -58
+walk_to_point = Vector2(-24.1735, 123.836)
 cursor = 5
-interaction_polygon = PackedVector2Array(-156.24408, -131.7319, -23.800385, -133.9959, 106.3793, -131.7319, 133.54727, -81.92402, 97.067566, -44.97303, 50.197205, -21.899292, 1.6528931, -22.620342, 36.805664, 47.321938, 91.66336, 102.59157, -17.008392, 105.987564, -1.6949768, 42.995598, -17.597412, 9.106049, -28.478027, -21.17823, -106.3163, -47.857246, -143.79211, -81.92402)
-interaction_polygon_position = Vector2(14.744406, 24.192142)
+interaction_polygon = PackedVector2Array(-156.244, -131.732, -23.8004, -133.996, 106.379, -131.732, 133.547, -81.924, 97.0676, -44.973, 50.1972, -21.8993, 1.65289, -22.6203, 36.8057, 47.3219, 91.6634, 102.592, -17.0084, 105.988, -1.69498, 42.9956, -17.5974, 9.10605, -28.478, -21.1782, -106.316, -47.8572, -143.792, -81.924)
+interaction_polygon_position = Vector2(14.7444, 24.1921)
 metadata/_edit_lock_ = true
 
 [node name="Apple" parent="Props" instance=ExtResource("7_dmwd2")]
 position = Vector2(407, 96)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_jxt23")
-walk_to_point = Vector2(2.968689, 131.04616)
-look_at_point = Vector2(0.84820557, 1.2723083)
+link_to_item = "Apple"
+walk_to_point = Vector2(2.96869, 131.046)
+look_at_point = Vector2(0.848206, 1.27231)
 cursor = 10
+
+[node name="Stick" parent="Props" instance=ExtResource("9_x5muf")]
+position = Vector2(279.00003, 235)
+rotation = 1.5892688
+scale = Vector2(0.5206728, 0.5206728)
+texture = ExtResource("10_evyjx")
 
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="RightExit" parent="Hotspots" instance=ExtResource("9_fmpc1")]
 position = Vector2(320, 160)
 description = "Go to Screen 2"
-walk_to_point = Vector2(300.2611, 122.14014)
-look_at_point = Vector2(193.38855, 119.59552)
+walk_to_point = Vector2(300.261, 122.14)
+look_at_point = Vector2(193.389, 119.596)
 cursor = 6
 interaction_polygon = PackedVector2Array(-9, -253, 27, -248, 26, 54, -7, 54)
 interaction_polygon_position = Vector2(293, 96)
@@ -70,10 +80,10 @@ interaction_polygon_position = Vector2(293, 96)
 
 [node name="CharacterBum *" parent="Characters" instance=ExtResource("8_bh5t1")]
 position = Vector2(315, 275)
-walk_to_point = Vector2(67.00751, 13.147034)
-look_at_point = Vector2(-15.691498, -45.378433)
+walk_to_point = Vector2(67.0075, 13.147)
+look_at_point = Vector2(-15.6915, -45.3784)
 
 [node name="CharacterDude *" parent="Characters" instance=ExtResource("5_nrj6t")]
 position = Vector2(50, 261)
-walk_to_point = Vector2(22.901276, -1.2723083)
-look_at_point = Vector2(23.325348, -0.84820557)
+walk_to_point = Vector2(22.9013, -1.27231)
+look_at_point = Vector2(23.3253, -0.848206)
