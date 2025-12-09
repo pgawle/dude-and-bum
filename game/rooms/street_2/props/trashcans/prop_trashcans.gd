@@ -15,7 +15,7 @@ func _on_click() -> void:
 	# something:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	match tries_trashcans:
+	match R.Street2.state.trashcans_tried:
 		0: 
 			await C.player.say("Do I really look like that much of a bum?")
 			tries_trashcans += 1
@@ -26,7 +26,7 @@ func _on_click() -> void:
 			tries_trashcans += 1
 		_:	
 			await C.player.say("It's empty and still gross.")	
-			
+	R.Street2.state.trashcans_tried +=1		
 func _on_double_click() -> void:
 	# Replace the call to E.command_fallback() with your code.
 	pass

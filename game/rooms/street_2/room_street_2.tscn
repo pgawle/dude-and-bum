@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://btdxtq1rm7vsh"]
 
-[ext_resource type="Script" path="res://game/rooms/street_2/room_street_2.gd" id="1_hm83m"]
+[ext_resource type="Script" uid="uid://dyo5sx4y8foes" path="res://game/rooms/street_2/room_street_2.gd" id="1_hm83m"]
 [ext_resource type="PackedScene" uid="uid://c2qijcjpg36bu" path="res://game/rooms/street_2/props/background/prop_background.tscn" id="2_5yc11"]
 [ext_resource type="PackedScene" uid="uid://jc2afdym1d7g" path="res://game/rooms/street_2/walkable_areas/floor/walkable_area_floor.tscn" id="2_44cop"]
 [ext_resource type="Texture2D" uid="uid://dbtgkatdv4lpc" path="res://game/rooms/street_2/props/background/street-2-background.png" id="3_tcyxs"]

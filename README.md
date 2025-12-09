@@ -26,6 +26,10 @@ for Baseline to work correcly go to characer Node, and Move Sprite2D up so it is
 ![Screenshot](./README/Dialog1.png)
 ![Screenshot](./README/Dialog2.png)
 
+## Adding State for Save and when changing rooms
+
+![Screenshot](./README/AddingState.png)
+
 
 ## Character Animation
 ### Names of direction

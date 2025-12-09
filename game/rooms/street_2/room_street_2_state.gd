@@ -5,6 +5,7 @@ extends PopochiuRoomData
 # own.
 # script_name and scene variables from the inherited class will not be saved.
 
+var trashcans_tried: int = 0
 
 #region Virtual ####################################################################################
 # Use this to save custom data for this PopochiuRoom when saving the game.
