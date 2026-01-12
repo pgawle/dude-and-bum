@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://btdxtq1rm7vsh"]
+[gd_scene load_steps=11 format=3 uid="uid://btdxtq1rm7vsh"]
 
 [ext_resource type="Script" uid="uid://dyo5sx4y8foes" path="res://game/rooms/street_2/room_street_2.gd" id="1_hm83m"]
 [ext_resource type="PackedScene" uid="uid://c2qijcjpg36bu" path="res://game/rooms/street_2/props/background/prop_background.tscn" id="2_5yc11"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dukq8t4v7gf8u" path="res://game/characters/dude/character_dude.tscn" id="5_74yxv"]
 [ext_resource type="PackedScene" uid="uid://dsip0ga778sol" path="res://game/rooms/street_2/hotspots/left_exit/hotspot_left_exit.tscn" id="5_fovha"]
 [ext_resource type="Texture2D" uid="uid://nhm2tb2sfogv" path="res://game/rooms/street_2/props/trashcans/trashcans.png" id="6_a1kwe"]
+[ext_resource type="PackedScene" uid="uid://dqs6todnx0smw" path="res://game/rooms/street_2/props/bg_test/prop_bg_test.tscn" id="7_x70v5"]
+[ext_resource type="Texture2D" uid="uid://bckby2gumdeln" path="res://game/rooms/street_2/props/bg_test/dred-1.png" id="8_ytws4"]
 
 [node name="RoomStreet2" type="Node2D"]
 script = ExtResource("1_hm83m")
@@ -34,6 +36,11 @@ texture = ExtResource("6_a1kwe")
 walk_to_point = Vector2(-43.1818, 54.1328)
 cursor = 10
 interaction_polygon = PackedVector2Array(-31, -21, 33, -19, 26, 27, -29, 23)
+
+[node name="BgTest" parent="Props" instance=ExtResource("7_x70v5")]
+position = Vector2(321, 122)
+texture = ExtResource("8_ytws4")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
